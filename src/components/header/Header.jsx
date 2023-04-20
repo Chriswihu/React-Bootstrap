@@ -6,9 +6,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import LoginForm from "../loginform/LoginForm.jsx";
 
-import LoggedIn from "../LoggedIn.jsx";
+import LoggedIn from "../loggedin/LoggedIn.jsx";
 import facade from "../../apiFacade.js";
 import LogIn from "../loginform/LoginForm.jsx";
+import {Badge} from "react-bootstrap";
 
 
 const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
@@ -28,14 +29,14 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
 
     return (
         <div className="Nav">
-            <Navbar bg="light" expand="lg">
+            <Navbar className="active">
                 <Container className="Nav">
-                    <a className="active" href="/"><img src="public/vite.svg" height="70px" className="img-fill"
+                    <a className="active" href="/"><img src="/vite.svg" height="78px" className="img-fill"
                                                         alt=""></img>
                     </a>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="Nav">
+                        <Nav className="Nav" fill="fill">
                             <a className="nav-item" href="/home">Home</a>
                             <a className="nav-item" href="/about">About</a>
                             <a className="nav-item" href="/contact">Contact</a>
@@ -44,8 +45,10 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
 
 
                             {!loggedIn ? (<LogIn login={login}/>) :
-                                (<div>
-                                    <LoggedIn user={user}/>
+                                (<div className="login-container">
+                                    <Badge bg = "primary">
+                                        <LoggedIn user={user}/>
+                                    </Badge>
                                     <button onClick={logout}>Logout</button>
                                 </div>)}
 
@@ -71,6 +74,7 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
         </div>
     )
         ;

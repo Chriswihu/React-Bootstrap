@@ -1,6 +1,14 @@
 *{box-sizing: border-box}
 
+th, td {
+    border: 1px solid silver;
+    padding:15px;
+}
+
 .login-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
     float: right;
 }
 
@@ -8,7 +16,7 @@
     padding: 6px;
     margin-top: 8px;
     margin-right: 10px;
-    font-size: 17px;
+    font-size: 18px;
     border: black;
     width: 180px; /* adjust as needed (as long as it doesn't break the topnav) */
 }
