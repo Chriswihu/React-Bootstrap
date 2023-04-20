@@ -1,0 +1,33 @@
+*{box-sizing: border-box}
+
+.login-container {
+    float: right;
+}
+
+.login-container input[type=text]{
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 10px;
+    font-size: 17px;
+    border: black;
+    width: 180px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+
+/* Style the button inside the input container */
+.login-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #ccc;
+}
+

@@ -1,0 +1,68 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid silver;
+    padding:15px;
+}
+
+th, td {
+    border: 1px solid silver;
+    padding:15px;
+}
+
+.Nav {
+    overflow: hidden;
+    background-color: #fcfcfc;
+}
+
+.Nav a {
+    float: left;
+    color: #000000;
+
+}
+.Nav a.nav-item {
+    justify-content: center;
+    text-align: center;
+    padding: 25.5px 20px;
+    text-decoration: none;
+    font: inherit;
+    font-size: 13px;
+}
+
+.Nav a:hover {
+    background-color: #003d76;
+    color: white;
+}
+
+.Nav a.active {
+    overflow: hidden;
+    /*background-color: #04AA6D;*/
+    color: white;
+}
+
+.Nav-right {
+    float: right;
+}
+
+.dropdown-menu {
+}
+
+.Nav.Nav-right.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.Nav.Nav-right.dropdown > .dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+.flex-parent {
+    display: flex;
+}
+.flex-child {
+    flex: 1;
+}
+
+pc,
+ul {
+    border: 5px solid #003d76;
+    padding: .5em;
+}
